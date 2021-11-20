@@ -159,4 +159,4 @@ io.on("connection", (socket: socketio.Socket) => {
     });
 });
 
-server.listen(3001, () => console.log("listening on *:3001"));
+server.listen(3001, process.env.HOST, () => console.log(`listening on ${process.env.HOST}:3001`));

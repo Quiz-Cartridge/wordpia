@@ -111,7 +111,7 @@ import Vue from 'vue'
 import { io, Socket } from 'socket.io-client'
 
 interface Answer {id: number, name: string, answerA: string, answerB: string, answerC: string}
-const socket: Socket = io(`localhost:3001`, { transports : ['websocket'] });
+const socket: Socket = io(`${process.env.HOST}:3001`, { transports : ['websocket'] });
 
 export default Vue.extend({
     data() {

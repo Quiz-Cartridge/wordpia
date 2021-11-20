@@ -64,4 +64,8 @@ export default {
   serverMiddleware: [
     { path: '/api', handler: '~/api' },
   ],
+
+  env: {
+    HOST: process.env.HOST || 'localhost'
+  }
 }

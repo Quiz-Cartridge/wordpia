@@ -102,7 +102,7 @@ import pushSound from '@/assets/sound/push.mp3'
 import correctSound from '@/assets/sound/correct.mp3'
 import wrongSound from '@/assets/sound/wrong.mp3'
 
-const socket: Socket = io(`localhost:3001`, { transports : ['websocket'] });
+const socket: Socket = io(`${process.env.HOST}:3001`, { transports : ['websocket'] });
 
 export default Vue.extend({
   components: { draggable, Player },
